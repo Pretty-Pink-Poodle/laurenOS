@@ -38,6 +38,11 @@ const startMenuItems =
         ".start-menu-item[data-window]"
     );
 
+const systemAboutButtons =
+    document.querySelectorAll(
+        ".system-about-button[data-window]"
+    );
+
 const shutdownButton =
     document.getElementById(
         "shutdownButton"
@@ -71,6 +76,11 @@ const taskbarWindows =
 const themeButtons =
     document.querySelectorAll(
         ".theme-button"
+    );
+
+const copyEmailButton =
+    document.getElementById(
+        "copyEmailButton"
     );
 
 
@@ -256,7 +266,7 @@ const projectData = {
             "JavaScript",
             "DOM",
             "localStorage",
-            "Web Audio"
+            "HTML Audio"
         ],
 
         features: [
@@ -269,17 +279,20 @@ const projectData = {
             "Boot sequence and faux operating-system interface",
             "Interactive Project Explorer",
             "Employment Records experience window",
-            "Credential Manager for certifications"
+            "Credential Manager for certifications",
+            "Resume Viewer with downloadable PDF",
+            "Interactive Contact app",
+            "About laurenOS system information dialog"
         ],
 
         learning:
             "laurenOS has pushed me to think about a web application as a complete system instead of a collection of isolated components. I've worked with reusable window behavior, state management, persistent preferences, dynamic rendering, event handling, and coordinating several interactive features without breaking existing functionality.",
 
         live:
-            "",
+            "https://pretty-pink-poodle.github.io/laurenOS/",
 
         repo:
-            ""
+            "https://github.com/Pretty-Pink-Poodle/laurenOS"
     }
 
 };
@@ -456,32 +469,6 @@ function renderProject(
 
         projectActions.appendChild(
             repoButton
-        );
-    }
-
-
-    if (
-        !project.live &&
-        !project.repo
-    ) {
-
-        const currentProject =
-            document.createElement(
-                "span"
-            );
-
-
-        currentProject.classList.add(
-            "project-action-button"
-        );
-
-
-        currentProject.textContent =
-            "💿 You're viewing this project now";
-
-
-        projectActions.appendChild(
-            currentProject
         );
     }
 
@@ -671,6 +658,7 @@ function renderNotifications() {
                 </div>
 
                 <div>
+
                     <strong>
                         ${notification.title}
                     </strong>
@@ -682,6 +670,7 @@ function renderNotifications() {
                     <small>
                         ${notification.time}
                     </small>
+
                 </div>
             `;
 
@@ -810,8 +799,89 @@ clearNotificationsButton.addEventListener(
 
 
 // =============================
+// CONTACT
+// =============================
+
+if (
+    copyEmailButton
+) {
+
+    copyEmailButton.addEventListener(
+        "click",
+        async function () {
+
+            const email =
+                "Lauren.a.surles@outlook.com";
+
+
+            try {
+
+                await navigator.clipboard.writeText(
+                    email
+                );
+
+
+                copyEmailButton.textContent =
+                    "✓ Copied!";
+
+
+                addNotification(
+                    "email copied ♡",
+                    "Lauren.a.surles@outlook.com was copied to your clipboard.",
+                    "📋"
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        copyEmailButton.textContent =
+                            "📋 Copy Email";
+
+                    },
+                    1800
+                );
+
+            } catch (error) {
+
+                addNotification(
+                    "copy failed",
+                    "Your browser blocked clipboard access. You can still select the email manually.",
+                    "⚠️"
+                );
+            }
+        }
+    );
+}
+
+
+// =============================
 // THEMES
 // =============================
+
+function getThemeLabel(
+    themeName
+) {
+
+    if (
+        themeName === "blue"
+    ) {
+
+        return "Office Blue";
+    }
+
+
+    if (
+        themeName === "night"
+    ) {
+
+        return "Night Mode";
+    }
+
+
+    return "Pink Dream";
+}
+
 
 function applyTheme(
     themeName,
@@ -866,7 +936,7 @@ function applyTheme(
 
         addNotification(
             "theme updated ♡",
-            `${themeName} theme is now active.`,
+            `${getThemeLabel(themeName)} is now active.`,
             "🎨"
         );
     }
@@ -949,6 +1019,10 @@ function closeWindow(
     windowElement.classList.add(
         "hidden"
     );
+
+
+    windowElement.dataset.minimized =
+        "false";
 
 
     removeTaskbarButton(
@@ -1044,6 +1118,10 @@ function addTaskbarButton(
                     windowElement.classList.remove(
                         "hidden"
                     );
+
+
+                    windowElement.dataset.minimized =
+                        "false";
 
 
                     bringToFront(
@@ -1151,6 +1229,24 @@ startMenuItems.forEach(
 
                 startMenu.classList.add(
                     "hidden"
+                );
+            }
+        );
+    }
+);
+
+
+systemAboutButtons.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                openWindow(
+                    document.getElementById(
+                        button.dataset.window
+                    )
                 );
             }
         );
@@ -1301,6 +1397,11 @@ startButton.addEventListener(
         event.stopPropagation();
 
 
+        notificationCenter.classList.add(
+            "hidden"
+        );
+
+
         startMenu.classList.toggle(
             "hidden"
         );
@@ -1388,7 +1489,7 @@ terminalInput.addEventListener(
         ) {
 
             addTerminalLine(
-                "commands: help, about, projects, experience, certs, skills, system, music, theme, notify, clear"
+                "commands: help, about, aboutos, version, projects, experience, certs, resume, contact, skills, system, music, theme, notify, clear"
             );
 
         } else if (
@@ -1437,6 +1538,64 @@ terminalInput.addEventListener(
             );
 
         } else if (
+            command === "resume"
+        ) {
+
+            openWindow(
+                document.getElementById(
+                    "resumeWindow"
+                )
+            );
+
+
+            addTerminalLine(
+                "opening Resume Viewer..."
+            );
+
+        } else if (
+            command === "contact"
+        ) {
+
+            openWindow(
+                document.getElementById(
+                    "contactWindow"
+                )
+            );
+
+
+            addTerminalLine(
+                "opening Lauren Messenger..."
+            );
+
+        } else if (
+            command === "aboutos"
+        ) {
+
+            openWindow(
+                document.getElementById(
+                    "aboutOsWindow"
+                )
+            );
+
+
+            addTerminalLine(
+                "opening About laurenOS..."
+            );
+
+        } else if (
+            command === "version"
+        ) {
+
+            addTerminalLine(
+                "laurenOS v1.7 — interactive portfolio build"
+            );
+
+
+            addTerminalLine(
+                "HTML + CSS + JavaScript | deployed with GitHub Pages"
+            );
+
+        } else if (
             command === "system"
         ) {
 
@@ -1482,9 +1641,11 @@ terminalInput.addEventListener(
 
             addTerminalLine(
                 `current theme: ${
-                    localStorage.getItem(
-                        "laurenOS-theme"
-                    ) || "pink"
+                    getThemeLabel(
+                        localStorage.getItem(
+                            "laurenOS-theme"
+                        ) || "pink"
+                    )
                 }`
             );
 
@@ -1501,7 +1662,7 @@ terminalInput.addEventListener(
         ) {
 
             addTerminalLine(
-                "Python | JavaScript | HTML | CSS | REST APIs | Git | GitHub | ServiceNow | JIRA | Microsoft 365"
+                "Python | JavaScript | HTML | CSS | REST APIs | JSON | Git | GitHub | ServiceNow | JIRA | Microsoft 365"
             );
 
         } else if (
@@ -1544,6 +1705,10 @@ function addTerminalLine(
     terminalOutput.appendChild(
         line
     );
+
+
+    terminalOutput.scrollTop =
+        terminalOutput.scrollHeight;
 }
 
 
@@ -1854,6 +2019,28 @@ nextTrackButton.addEventListener(
 
 
 audio.addEventListener(
+    "ended",
+    function () {
+
+        currentTrackIndex =
+            (
+                currentTrackIndex +
+                1
+            ) %
+            tracks.length;
+
+
+        loadTrack(
+            currentTrackIndex
+        );
+
+
+        audio.play();
+    }
+);
+
+
+audio.addEventListener(
     "play",
     function () {
 
@@ -1987,6 +2174,8 @@ shutdownButton.addEventListener(
                 color: white;
                 font-family: monospace;
                 font-size: 24px;
+                text-align: center;
+                padding: 30px;
             ">
                 it's now safe to turn off your computer ♡
             </div>
@@ -2017,7 +2206,7 @@ setTimeout(
 
             addNotification(
                 "welcome back ♡",
-                "laurenOS is ready. your preferences were restored.",
+                "laurenOS v1.7 is ready. your desktop preferences were restored.",
                 "💖"
             );
 
@@ -2025,7 +2214,7 @@ setTimeout(
 
             addNotification(
                 "welcome to laurenOS ♡",
-                "open Project Explorer, Employment Records, or Credential Manager to explore my work.",
+                "click around, open some windows, and make yourself at home.",
                 "🌸"
             );
 
@@ -2035,6 +2224,36 @@ setTimeout(
                 "true"
             );
         }
+
+
+        setTimeout(
+            function () {
+
+                addNotification(
+                    "system tip",
+                    "open Terminal and type 'help' to discover available commands.",
+                    "💻",
+                    false
+                );
+
+            },
+            700
+        );
+
+
+        setTimeout(
+            function () {
+
+                addNotification(
+                    "portfolio loaded",
+                    "Projects, experience, credentials, resume, contact tools, and system information are ready.",
+                    "📁",
+                    false
+                );
+
+            },
+            1000
+        );
 
     },
     3000

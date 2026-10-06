@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lauren's Desktop</title>
+    <meta
+        name="description"
+        content="Lauren Surles' interactive retro desktop portfolio featuring software projects, IT experience, certifications, and technical skills."
+    >
+
+    <title>laurenOS | Lauren Surles</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -41,79 +46,48 @@
 
     <main class="desktop">
 
-        <button
-            class="desktop-icon"
-            data-window="aboutWindow"
-        >
+        <button class="desktop-icon" data-window="aboutWindow">
             <span class="icon">🖥️</span>
             <span class="icon-label">About Me</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="skillsWindow"
-        >
+        <button class="desktop-icon" data-window="skillsWindow">
             <span class="icon">💾</span>
             <span class="icon-label">My Computer</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="projectsWindow"
-        >
+        <button class="desktop-icon" data-window="projectsWindow">
             <span class="icon">📁</span>
             <span class="icon-label">Projects</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="experienceWindow"
-        >
+        <button class="desktop-icon" data-window="experienceWindow">
             <span class="icon">💼</span>
             <span class="icon-label">Experience</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="certificationsWindow"
-        >
+        <button class="desktop-icon" data-window="certificationsWindow">
             <span class="icon">🪪</span>
             <span class="icon-label">Certifications</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="resumeWindow"
-        >
+        <button class="desktop-icon" data-window="resumeWindow">
             <span class="icon">📄</span>
             <span class="icon-label">Resume</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="contactWindow"
-        >
+        <button class="desktop-icon" data-window="contactWindow">
             <span class="icon">💌</span>
             <span class="icon-label">Contact</span>
         </button>
 
-
-        <button
-            class="desktop-icon"
-            data-window="musicWindow"
-        >
+        <button class="desktop-icon" data-window="musicWindow">
             <span class="icon">🎵</span>
             <span class="icon-label">Music</span>
         </button>
 
 
-        <!-- ABOUT WINDOW -->
+        <!-- ABOUT ME -->
 
         <section
             class="window hidden"
@@ -127,17 +101,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -156,8 +124,7 @@
                 </p>
 
                 <p>
-                    i like building useful things that still have
-                    personality.
+                    i like building useful things that still have personality.
                 </p>
 
             </div>
@@ -179,17 +146,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -237,11 +198,13 @@
                     </div>
 
                     <div class="system-row">
+
                         <strong>Status</strong>
 
                         <span class="system-online">
                             ● online
                         </span>
+
                     </div>
 
                 </div>
@@ -319,10 +282,7 @@
                     </div>
 
                     <div class="drive-bar">
-
-                        <div class="drive-fill development-drive">
-                        </div>
-
+                        <div class="drive-fill development-drive"></div>
                     </div>
 
                     <p class="drive-text">
@@ -330,6 +290,15 @@
                     </p>
 
                 </div>
+
+
+                <button
+                    class="system-about-button"
+                    type="button"
+                    data-window="aboutOsWindow"
+                >
+                    💿 About laurenOS
+                </button>
 
             </div>
 
@@ -350,17 +319,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -370,11 +333,7 @@
 
 
             <div class="project-toolbar">
-
-                <span>
-                    📁 C:\Lauren\Portfolio\Projects
-                </span>
-
+                <span>📁 C:\Lauren\Portfolio\Projects</span>
             </div>
 
 
@@ -386,7 +345,6 @@
                         project files
                     </div>
 
-
                     <button
                         class="project-file active"
                         data-project="ticketflow"
@@ -395,7 +353,6 @@
                         <span>TicketFlow</span>
                     </button>
 
-
                     <button
                         class="project-file"
                         data-project="weather"
@@ -403,7 +360,6 @@
                         <span class="project-file-icon">🌤️</span>
                         <span>Y2K Weather App</span>
                     </button>
-
 
                     <button
                         class="project-file"
@@ -466,8 +422,7 @@
 
                         <h3>overview</h3>
 
-                        <p id="projectDetailDescription">
-                        </p>
+                        <p id="projectDetailDescription"></p>
 
                     </div>
 
@@ -479,8 +434,7 @@
                         <div
                             class="tech-tags"
                             id="projectTechTags"
-                        >
-                        </div>
+                        ></div>
 
                     </div>
 
@@ -492,8 +446,7 @@
                         <ul
                             class="project-feature-list"
                             id="projectFeatureList"
-                        >
-                        </ul>
+                        ></ul>
 
                     </div>
 
@@ -502,8 +455,7 @@
 
                         <h3>what i learned</h3>
 
-                        <p id="projectLearningText">
-                        </p>
+                        <p id="projectLearningText"></p>
 
                     </div>
 
@@ -511,8 +463,7 @@
                     <div
                         class="project-actions"
                         id="projectActions"
-                    >
-                    </div>
+                    ></div>
 
                 </section>
 
@@ -535,17 +486,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -555,11 +500,7 @@
 
 
             <div class="experience-toolbar">
-
-                <span>
-                    💼 C:\Lauren\Career\Experience.log
-                </span>
-
+                <span>💼 C:\Lauren\Career\Experience.log</span>
             </div>
 
 
@@ -655,8 +596,7 @@
 
                             <li>
                                 Assisted with equipment deployment,
-                                inventory, configuration, and
-                                user support.
+                                inventory, configuration, and user support.
                             </li>
 
                         </ul>
@@ -714,8 +654,7 @@
 
                             <li>
                                 Supported customers and internal users
-                                through help desk and customer support
-                                workflows.
+                                through help desk and customer support workflows.
                             </li>
 
                             <li>
@@ -787,15 +726,14 @@
                         <ul class="experience-list">
 
                             <li>
-                                Managed classroom environments
-                                across multiple grade levels
-                                and subject areas.
+                                Managed classroom environments across
+                                multiple grade levels and subject areas.
                             </li>
 
                             <li>
                                 Followed lesson plans, communicated
-                                expectations clearly, and adapted
-                                quickly to changing assignments.
+                                expectations clearly, and adapted quickly
+                                to changing assignments.
                             </li>
 
                             <li>
@@ -839,17 +777,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -859,11 +791,7 @@
 
 
             <div class="certifications-toolbar">
-
-                <span>
-                    🪪 C:\Lauren\Credentials\Installed
-                </span>
-
+                <span>🪪 C:\Lauren\Credentials\Installed</span>
             </div>
 
 
@@ -899,9 +827,7 @@
 
                     <div class="certification-vendor-heading">
 
-                        <span>
-                            🪟 Microsoft
-                        </span>
+                        <span>🪟 Microsoft</span>
 
                         <span class="vendor-count">
                             6 installed
@@ -915,15 +841,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    MS
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">MS</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>MS-900</h2>
@@ -944,15 +863,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    SC
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">SC</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>SC-900</h2>
@@ -963,8 +875,8 @@
 
                             <p class="certification-description">
                                 Foundational understanding of security,
-                                compliance, identity, and Microsoft security
-                                solutions.
+                                compliance, identity, and Microsoft
+                                security solutions.
                             </p>
 
                         </article>
@@ -973,15 +885,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    AZ
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">AZ</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>AZ-900</h2>
@@ -992,8 +897,8 @@
 
                             <p class="certification-description">
                                 Core cloud concepts, Azure services,
-                                management tools, governance, and
-                                cloud pricing fundamentals.
+                                management tools, governance,
+                                and cloud pricing fundamentals.
                             </p>
 
                         </article>
@@ -1002,15 +907,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    AI
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">AI</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>AI-900</h2>
@@ -1031,15 +929,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    PL
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">PL</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>PL-900</h2>
@@ -1050,8 +941,8 @@
 
                             <p class="certification-description">
                                 Foundational knowledge of Power Apps,
-                                Power Automate, Dataverse, and
-                                low-code business solutions.
+                                Power Automate, Dataverse,
+                                and low-code business solutions.
                             </p>
 
                         </article>
@@ -1060,15 +951,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge">
-                                    DP
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge">DP</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>DP-900</h2>
@@ -1094,9 +978,7 @@
 
                     <div class="certification-vendor-heading">
 
-                        <span>
-                            🛠️ CompTIA
-                        </span>
+                        <span>🛠️ CompTIA</span>
 
                         <span class="vendor-count">
                             installed
@@ -1110,20 +992,11 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge wide">
-                                    A+
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge wide">A+</div>
+                                <span class="credential-status">active</span>
                             </div>
 
-                            <h2>
-                                CompTIA A+
-                            </h2>
+                            <h2>CompTIA A+</h2>
 
                             <p class="certification-name">
                                 Core 2 / 220-1202
@@ -1146,9 +1019,7 @@
 
                     <div class="certification-vendor-heading">
 
-                        <span>
-                            🔐 ISC2
-                        </span>
+                        <span>🔐 ISC2</span>
 
                         <span class="vendor-count">
                             installed
@@ -1162,15 +1033,8 @@
                         <article class="certification-card">
 
                             <div class="certification-card-top">
-
-                                <div class="certification-badge wide">
-                                    CC
-                                </div>
-
-                                <span class="credential-status">
-                                    active
-                                </span>
-
+                                <div class="certification-badge wide">CC</div>
+                                <span class="credential-status">active</span>
                             </div>
 
                             <h2>
@@ -1226,17 +1090,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -1265,7 +1123,6 @@
                     <div class="resume-document-icon">
                         📄
                     </div>
-
 
                     <div>
 
@@ -1323,13 +1180,8 @@
                                 Experience
                             </strong>
 
-                            <p>
-                                State of Tennessee
-                            </p>
-
-                            <p>
-                                Ingram Content Group
-                            </p>
+                            <p>State of Tennessee</p>
+                            <p>Ingram Content Group</p>
 
                         </div>
 
@@ -1348,13 +1200,8 @@
                                 Education
                             </strong>
 
-                            <p>
-                                Southern New Hampshire University
-                            </p>
-
-                            <p>
-                                TCAT Murfreesboro
-                            </p>
+                            <p>Southern New Hampshire University</p>
+                            <p>TCAT Murfreesboro</p>
 
                         </div>
 
@@ -1373,13 +1220,8 @@
                                 Development
                             </strong>
 
-                            <p>
-                                Python • JavaScript
-                            </p>
-
-                            <p>
-                                HTML • CSS • Git
-                            </p>
+                            <p>Python • JavaScript</p>
+                            <p>HTML • CSS • Git</p>
 
                         </div>
 
@@ -1398,13 +1240,8 @@
                                 Credentials
                             </strong>
 
-                            <p>
-                                Microsoft Fundamentals
-                            </p>
-
-                            <p>
-                                CompTIA • ISC2
-                            </p>
+                            <p>Microsoft Fundamentals</p>
+                            <p>CompTIA • ISC2</p>
 
                         </div>
 
@@ -1444,20 +1281,11 @@
                     <div class="resume-education-row">
 
                         <div>
-
-                            <strong>
-                                Southern New Hampshire University
-                            </strong>
-
-                            <p>
-                                B.S. Computer Science
-                            </p>
-
+                            <strong>Southern New Hampshire University</strong>
+                            <p>B.S. Computer Science</p>
                         </div>
 
-                        <span>
-                            Expected Spring 2028
-                        </span>
+                        <span>Expected Spring 2028</span>
 
                     </div>
 
@@ -1465,20 +1293,11 @@
                     <div class="resume-education-row">
 
                         <div>
-
-                            <strong>
-                                Southern New Hampshire University
-                            </strong>
-
-                            <p>
-                                M.S. Computer Science
-                            </p>
-
+                            <strong>Southern New Hampshire University</strong>
+                            <p>M.S. Computer Science</p>
                         </div>
 
-                        <span>
-                            Expected Spring 2029
-                        </span>
+                        <span>Expected Spring 2029</span>
 
                     </div>
 
@@ -1486,20 +1305,11 @@
                     <div class="resume-education-row">
 
                         <div>
-
-                            <strong>
-                                TCAT Murfreesboro
-                            </strong>
-
-                            <p>
-                                Infrastructure Management Specialist
-                            </p>
-
+                            <strong>TCAT Murfreesboro</strong>
+                            <p>Infrastructure Management Specialist</p>
                         </div>
 
-                        <span>
-                            Apr 2026
-                        </span>
+                        <span>Apr 2026</span>
 
                     </div>
 
@@ -1507,20 +1317,11 @@
                     <div class="resume-education-row">
 
                         <div>
-
-                            <strong>
-                                Middle Tennessee State University
-                            </strong>
-
-                            <p>
-                                Journalism coursework
-                            </p>
-
+                            <strong>Middle Tennessee State University</strong>
+                            <p>Journalism coursework</p>
                         </div>
 
-                        <span>
-                            2021 — 2023
-                        </span>
+                        <span>2021 — 2023</span>
 
                     </div>
 
@@ -1538,7 +1339,6 @@
                         👁️ View Resume
                     </a>
 
-
                     <a
                         href="resume.pdf"
                         download="Lauren-Surles-Resume.pdf"
@@ -1552,13 +1352,9 @@
 
                 <div class="resume-footer">
 
-                    <span>
-                        file type: PDF
-                    </span>
+                    <span>file type: PDF</span>
 
-                    <span>
-                        status: recruiter-ready ♡
-                    </span>
+                    <span>status: recruiter-ready ♡</span>
 
                 </div>
 
@@ -1570,28 +1366,22 @@
         <!-- CONTACT -->
 
         <section
-            class="window hidden"
+            class="window contact-window hidden"
             id="contactWindow"
             data-title="Contact"
         >
 
             <div class="window-titlebar">
 
-                <span>Contact</span>
+                <span>Lauren Messenger</span>
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -1600,28 +1390,456 @@
             </div>
 
 
-            <div class="window-content">
+            <div class="contact-toolbar">
 
-                <h1>let's connect ♡</h1>
+                <span>
+                    💌 C:\Lauren\Network\Contact.exe
+                </span>
 
-                <p>
-                    Email:
+                <span class="contact-toolbar-status">
+                    connected
+                </span>
 
-                    <a href="mailto:Lauren.a.surles@outlook.com">
-                        Lauren.a.surles@outlook.com
+            </div>
+
+
+            <div class="contact-content">
+
+                <div class="contact-profile">
+
+                    <div class="contact-avatar">
+                        LS
+                    </div>
+
+                    <div class="contact-profile-info">
+
+                        <p class="contact-eyebrow">
+                            user profile
+                        </p>
+
+                        <h1>
+                            Lauren Surles
+                        </h1>
+
+                        <p>
+                            Computer Science Student • IT Graduate
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-presence">
+
+                        <span class="presence-dot"></span>
+
+                        <span>
+                            available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-status-card">
+
+                    <div class="contact-status-icon">
+                        💼
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Available for opportunities
+                        </strong>
+
+                        <p>
+                            Open to technical support, systems,
+                            IT operations, and software development roles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+                    <article class="contact-card">
+
+                        <div class="contact-card-icon">
+                            📧
+                        </div>
+
+                        <div class="contact-card-content">
+
+                            <p class="contact-card-label">
+                                EMAIL
+                            </p>
+
+                            <h2>
+                                Outlook
+                            </h2>
+
+                            <a
+                                href="mailto:Lauren.a.surles@outlook.com"
+                                class="contact-address"
+                            >
+                                Lauren.a.surles@outlook.com
+                            </a>
+
+                            <div class="contact-card-actions">
+
+                                <a
+                                    href="mailto:Lauren.a.surles@outlook.com"
+                                    class="contact-action-button"
+                                >
+                                    ✉️ Send Email
+                                </a>
+
+                                <button
+                                    class="contact-action-button secondary"
+                                    id="copyEmailButton"
+                                    type="button"
+                                >
+                                    📋 Copy Email
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="contact-card">
+
+                        <div class="contact-card-icon">
+                            💻
+                        </div>
+
+                        <div class="contact-card-content">
+
+                            <p class="contact-card-label">
+                                GITHUB
+                            </p>
+
+                            <h2>
+                                Pretty-Pink-Poodle
+                            </h2>
+
+                            <p class="contact-card-description">
+                                Projects, source code, and development work.
+                            </p>
+
+                            <div class="contact-card-actions">
+
+                                <a
+                                    href="https://github.com/Pretty-Pink-Poodle"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="contact-action-button"
+                                >
+                                    🌐 Open GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="contact-card contact-card-wide">
+
+                        <div class="contact-card-icon">
+                            📍
+                        </div>
+
+                        <div class="contact-card-content">
+
+                            <p class="contact-card-label">
+                                LOCATION
+                            </p>
+
+                            <h2>
+                                Nashville Area, Tennessee
+                            </h2>
+
+                            <p class="contact-card-description">
+                                Based in Middle Tennessee and focused
+                                on opportunities in the Nashville area.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="contact-terminal-strip">
+
+                    <span>status: online</span>
+
+                    <span>replies: enabled</span>
+
+                    <span>network: professional ♡</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT LAURENOS -->
+
+        <section
+            class="window about-os-window hidden"
+            id="aboutOsWindow"
+            data-title="About laurenOS"
+        >
+
+            <div class="window-titlebar">
+
+                <span>About laurenOS</span>
+
+                <div class="window-controls">
+
+                    <button class="window-minimize" aria-label="Minimize">
+                        _
+                    </button>
+
+                    <button class="window-close" aria-label="Close">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-os-content">
+
+                <div class="about-os-hero">
+
+                    <div class="about-os-logo">
+                        💿
+                    </div>
+
+                    <div>
+
+                        <p class="about-os-label">
+                            portfolio operating system
+                        </p>
+
+                        <h1>
+                            laurenOS
+                        </h1>
+
+                        <p class="about-os-version">
+                            Version 1.7 • Portfolio Build
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-os-description">
+
+                    <p>
+                        laurenOS is an interactive desktop-style portfolio
+                        designed and developed by Lauren Surles.
+                    </p>
+
+                    <p>
+                        The project combines software development,
+                        IT experience, and a retro Y2K interface into
+                        one browser-based portfolio environment.
+                    </p>
+
+                </div>
+
+
+                <div class="about-os-grid">
+
+                    <div class="about-os-panel">
+
+                        <div class="about-os-panel-heading">
+                            👤 USER
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Name</span>
+                            <strong>Lauren Surles</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Role</span>
+                            <strong>Computer Science Student</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Background</span>
+                            <strong>IT Graduate</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Region</span>
+                            <strong>Nashville Area</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-os-panel">
+
+                        <div class="about-os-panel-heading">
+                            🎓 EDUCATION PATH
+                        </div>
+
+                        <div class="about-os-timeline-item">
+
+                            <strong>
+                                B.S. Computer Science
+                            </strong>
+
+                            <span>
+                                Spring 2028
+                            </span>
+
+                        </div>
+
+                        <div class="about-os-timeline-item">
+
+                            <strong>
+                                M.S. Computer Science
+                            </strong>
+
+                            <span>
+                                Spring 2029
+                            </span>
+
+                        </div>
+
+                        <div class="about-os-timeline-item">
+
+                            <strong>
+                                Infrastructure Management Specialist
+                            </strong>
+
+                            <span>
+                                2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-os-panel">
+
+                        <div class="about-os-panel-heading">
+                            ⚙️ BUILD
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>HTML</span>
+                            <strong>installed</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>CSS</span>
+                            <strong>installed</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>JavaScript</span>
+                            <strong>installed</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Storage</span>
+                            <strong>localStorage</strong>
+                        </div>
+
+                        <div class="about-os-row">
+                            <span>Audio</span>
+                            <strong>HTML Audio</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-os-panel">
+
+                        <div class="about-os-panel-heading">
+                            🚀 CURRENT FOCUS
+                        </div>
+
+                        <div class="about-os-tags">
+
+                            <span>Software Development</span>
+                            <span>Technical Support</span>
+                            <span>Systems</span>
+                            <span>Front-End Development</span>
+                            <span>Cloud</span>
+                            <span>Cybersecurity</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-os-system-box">
+
+                    <p>
+                        <strong>SYSTEM STATUS:</strong>
+                        stable
+                    </p>
+
+                    <p>
+                        <strong>DEPLOYMENT:</strong>
+                        GitHub Pages
+                    </p>
+
+                    <p>
+                        <strong>REPOSITORY:</strong>
+                        Pretty-Pink-Poodle/laurenOS
+                    </p>
+
+                </div>
+
+
+                <div class="about-os-links">
+
+                    <a
+                        href="https://github.com/Pretty-Pink-Poodle/laurenOS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="about-os-button"
+                    >
+                        💻 View Source
                     </a>
-                </p>
-
-                <p>
-                    GitHub:
 
                     <a
                         href="https://github.com/Pretty-Pink-Poodle"
                         target="_blank"
                         rel="noopener noreferrer"
+                        class="about-os-button secondary"
                     >
-                        Pretty-Pink-Poodle
+                        👤 GitHub Profile
                     </a>
+
+                </div>
+
+
+                <p class="about-os-footer">
+                    designed with code, curiosity, and an unreasonable amount of pink ♡
                 </p>
 
             </div>
@@ -1643,17 +1861,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -1670,7 +1882,7 @@
                 >
 
                     <p>
-                        laurenOS terminal v1.5
+                        laurenOS terminal v1.7
                     </p>
 
                     <p>
@@ -1715,17 +1927,11 @@
 
                 <div class="window-controls">
 
-                    <button
-                        class="window-minimize"
-                        aria-label="Minimize"
-                    >
+                    <button class="window-minimize" aria-label="Minimize">
                         _
                     </button>
 
-                    <button
-                        class="window-close"
-                        aria-label="Close"
-                    >
+                    <button class="window-close" aria-label="Close">
                         ×
                     </button>
 
@@ -1740,13 +1946,9 @@
 
                     <div class="music-top">
 
-                        <div
-                            class="album-art"
-                            id="albumArt"
-                        >
+                        <div class="album-art" id="albumArt">
                             🎀
                         </div>
-
 
                         <div class="now-playing-card">
 
@@ -1833,8 +2035,7 @@
                             playlist ♡
                         </h3>
 
-                        <div id="playlistItems">
-                        </div>
+                        <div id="playlistItems"></div>
 
                     </div>
 
@@ -1849,84 +2050,49 @@
 
     <!-- START MENU -->
 
-    <div
-        class="start-menu hidden"
-        id="startMenu"
-    >
+    <div class="start-menu hidden" id="startMenu">
 
         <div class="start-menu-header">
             lauren.exe ♡
         </div>
 
-
-        <button
-            class="start-menu-item"
-            data-window="aboutWindow"
-        >
+        <button class="start-menu-item" data-window="aboutWindow">
             🖥️ About Me
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="skillsWindow"
-        >
+        <button class="start-menu-item" data-window="skillsWindow">
             💾 My Computer
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="projectsWindow"
-        >
+        <button class="start-menu-item" data-window="projectsWindow">
             📁 Project Explorer
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="experienceWindow"
-        >
+        <button class="start-menu-item" data-window="experienceWindow">
             💼 Experience
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="certificationsWindow"
-        >
+        <button class="start-menu-item" data-window="certificationsWindow">
             🪪 Certifications
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="resumeWindow"
-        >
+        <button class="start-menu-item" data-window="resumeWindow">
             📄 Resume
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="contactWindow"
-        >
+        <button class="start-menu-item" data-window="contactWindow">
             💌 Contact
         </button>
 
-
-        <button
-            class="start-menu-item"
-            data-window="musicWindow"
-        >
+        <button class="start-menu-item" data-window="musicWindow">
             🎵 Music Player
         </button>
 
+        <button class="start-menu-item" data-window="aboutOsWindow">
+            💿 About laurenOS
+        </button>
 
-        <button
-            class="start-menu-item"
-            id="terminalButton"
-        >
+        <button class="start-menu-item" id="terminalButton">
             💻 Terminal
         </button>
 
@@ -1940,24 +2106,15 @@
                 🎨 Desktop Theme
             </p>
 
-            <button
-                class="theme-button"
-                data-theme="pink"
-            >
+            <button class="theme-button" data-theme="pink">
                 🌸 Pink Dream
             </button>
 
-            <button
-                class="theme-button"
-                data-theme="blue"
-            >
+            <button class="theme-button" data-theme="blue">
                 🖥️ Office Blue
             </button>
 
-            <button
-                class="theme-button"
-                data-theme="night"
-            >
+            <button class="theme-button" data-theme="night">
                 🌙 Night Mode
             </button>
 
@@ -2003,26 +2160,18 @@
         <div
             class="notification-list"
             id="notificationList"
-        >
-        </div>
+        ></div>
 
     </aside>
 
 
     <!-- TOAST -->
 
-    <div
-        class="desktop-toast"
-        id="desktopToast"
-    >
+    <div class="desktop-toast" id="desktopToast">
 
-        <div
-            class="toast-icon"
-            id="toastIcon"
-        >
+        <div class="toast-icon" id="toastIcon">
             🌸
         </div>
-
 
         <div class="toast-content">
 
@@ -2035,7 +2184,6 @@
             </p>
 
         </div>
-
 
         <button
             class="toast-close"
@@ -2052,20 +2200,14 @@
 
     <footer class="taskbar">
 
-        <button
-            class="start-button"
-            id="startButton"
-        >
+        <button class="start-button" id="startButton">
             🌸 Start
         </button>
-
 
         <div
             class="taskbar-windows"
             id="taskbarWindows"
-        >
-        </div>
-
+        ></div>
 
         <button
             class="notification-button"
@@ -2084,11 +2226,7 @@
 
         </button>
 
-
-        <div
-            class="clock"
-            id="clock"
-        >
+        <div class="clock" id="clock">
             --:--
         </div>
 
